@@ -16,14 +16,17 @@ y是（亚采样）观测到的信号，X是原信号，本质是已知y并且�
 y是低频采样收集的观测数据，采样频率低于奈奎斯特采样频率，所以直接通过低频y还原**X**理论上不可行
 做法是把X再进行稀疏变换变成$\alpha$（特别稀疏）
 
-$$\begin{array}{l}
+$$
+\begin{array}{l}
 {令}\quad X=\psi  \alpha \quad{其中，} \psi {作为稀疏基，} \alpha {仅有K个非零的} \alpha_k
 \\
 y=\phi\psi \alpha，其中\phi称为观测基，\psi为稀疏变换，\alpha为稀疏信号
 \\
 令A=\phi \psi \longrightarrow  y=A\alpha
-\end{array}$$
+\end{array}
+$$
 * 问题：可能本来$X=\psi \alpha$挺稀疏，但经过一个观测基y=$\phi$X之后，y变得不那么稀疏
+
 <!-- more -->
 ![](https://gjy.pub/root/file/2022-11-13-22-31-33@123.png)
  常见的稀疏变换有傅里叶 ~，小波 ~等
@@ -69,7 +72,8 @@ Output:x_* \longleftarrow x_{k}
 \end{array}
 $$
 
-$$\begin{array}{l}
+$$
+\begin{array}{l}
 \\
 上上面的公式：\\
 X=\psi \alpha 
@@ -104,7 +108,8 @@ L2O即从其在样本问题上的表现中学习。该方法可能缺乏坚实�
 Ada-LISTA的引入
 * 引入了一种称为 Ada-LISTA 的自适应学习求解器，它接收成对的信号及其相应的字典作为输入，并学习一个通用架构来为它们提供服务。
 * 该架构通过两个辅助权重矩阵包装字典。在推理时，我们的模型可以容纳信号及其相应的字典，允许处理各种模型修改而无需重复的重新训练。
-<!-- $$
+$$
+\begin{array}{l}
 Algorithm 2 Ada-LISTA Training \\
 Input: pairs of signals and dictionaries {yi, Di}N i=1 \\
 Preprocessing: find xi for each pair (yi, Di) by solving \\
@@ -113,7 +118,8 @@ Goal: learn Θ = (W1, W2, θk, γk) \\
 Init: W1, W2 = I, θk, γk = 1 \\
 for\quad each\quad batch\quad {yi, Di, xi}\quad NB i=1 do\\ update\quad Θ\quad by\quad ∂Θ ∑ i∈NB ‖FK (yi, Di; Θ) − xi‖2 2 \\
 end for
-$$ -->
+\end{array}
+$$
 ![](https://gjy.pub/root/file/2022-11-12-16-04-08@jsu_ratio_0.5_T_20_lambd_0.1.png)
 
 * 如何理解这句话？
