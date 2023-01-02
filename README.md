@@ -22,15 +22,14 @@ $$\begin{array}{l}
 y=\phi\psi \alpha，其中\phi称为观测基，\psi为稀疏变换，\alpha为稀疏信号
 \\
 令A=\phi \psi \longrightarrow  y=A\alpha
-\end{array}
-$$
+\end{array}$$
 * 问题：可能本来$X=\psi \alpha$挺稀疏，但经过一个观测基y=$\phi$X之后，y变得不那么稀疏
 <!-- more -->
 ![](https://gjy.pub/root/file/2022-11-13-22-31-33@123.png)
  常见的稀疏变换有傅里叶 ~，小波 ~等
 
  X变换成一个稀疏域$\alpha_{M\times1}$且M<<N，可以是频域，也可以是其他，变换过程叫做交换基，观测基也叫观测矩阵
- 
+
  观测矩阵 $\phi$ 和稀疏变换矩阵 $\psi$ 不相关作为RIP准则，通常满足高斯随机的观测矩阵即可满足RIP准则
 
 要想使信号完全重构，必须保证观测矩阵$\phi$不会把两个不同的K-项稀疏信号映射到同一个采样集合中，这就要求从观测矩阵中抽取的每M个列向量构成的矩阵是非奇异的
