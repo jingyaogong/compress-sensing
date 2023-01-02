@@ -7,7 +7,7 @@ tags: [笔记]
 原理就是一个欠定方程组
 
 $$
-y=\phi  X，其中\quad y=[y_i]_{M\times 1}，\phi=[\phi_{ij}]_{M\times N}， X=[X_i]_{N\times 1} \qquad M<<N
+y=\phi  X，其中\quad y=[y_i]_{M\times 1}，\phi=[\phi_{ij}]_{M\times N}， X=[X_i]_{N\times 1} \quad M << N
 $$
       
 $\phi$ 是观测基，前提条件是信号具有稀疏性或者可压缩性
